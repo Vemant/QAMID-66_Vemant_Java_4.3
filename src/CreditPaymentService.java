@@ -1,9 +1,10 @@
 import java.lang.Math;
+
 public class CreditPaymentService {
-    public int calculate (int s, int t, double p) {
-        double kHelp = 1 + p / (12 * 100);
-        double kAnn = p / (12 * 100) * Math.pow(kHelp, t) / (Math.pow(kHelp, t) - 1);
-        double paymentMonth = s * kAnn;
+    public int calculate(int sum, int time, double percent) {
+        double coftHelp = 1 + percent / (12 * 100);
+        double coftAnnuit = percent / (12 * 100) * Math.pow(coftHelp, time) / (Math.pow(coftHelp, time) - 1);
+        double paymentMonth = sum * coftAnnuit;
         return (int) paymentMonth;
     }
 }
